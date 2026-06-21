@@ -1,0 +1,40 @@
+{
+    "title": "HHKB(JP配列): _キーをバックスラッシュに変更",
+    "rules": [
+        {
+            "description": "HHKB(JP配列): International1キー(_)をバックスラッシュに変更（Shift併用時は_のまま）",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": ["shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "international1",
+                            "modifiers": ["shift"]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "international3",
+                            "modifiers": ["option"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
